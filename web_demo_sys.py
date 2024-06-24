@@ -231,7 +231,7 @@ with gr.Blocks(css=customCSS, theme=small_and_beautiful_theme) as demo:
     user_question = gr.State("")
     system_prompt = gr.State("")
 
-    gr.Markdown("# OpenLLM Test 🚀")
+    gr.Markdown("# Tudou OpenLLM Test 🚀")
 
     with gr.Row():
         gr.HTML(title)
@@ -266,8 +266,8 @@ with gr.Blocks(css=customCSS, theme=small_and_beautiful_theme) as demo:
                         with gr.Accordion(open=False, label="🧮所有模型配置"):
                             models = gr.Json(
                                 value={
-                                    "Yi-1.5-34B-Chat-16K-GPTQ-Int4": "http://10.0.34.61:9012/v1",
                                     "Qwen2-72B-Chat-GPTQ-Int4": "http://10.0.34.61:9010/v1",
+                                    "Yi-1.5-34B-Chat-16K-GPTQ-Int4(暂停)": "http://10.0.34.61:9012/v1",
                                     "Qwen1.5-14B-Chat": "http://10.0.34.61:7893/v1",
                                     "Baichuan2-13B-chat": "http://10.0.34.61:9006/v1",
                                     "Qwen2-7B-Chat": "http://10.0.34.61:9004/v1",
@@ -424,7 +424,7 @@ with gr.Blocks(css=customCSS, theme=small_and_beautiful_theme) as demo:
         show_progress=True,
     )
 
-demo.title = "Chatbot Test"
+demo.title = "Tudou Chatbot Test"
 
 if __name__ == "__main__":
     demo.queue(concurrency_count=CONCURRENT_COUNT).launch(
